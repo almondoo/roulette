@@ -46,7 +46,7 @@ const Circle = ({ items }: Props): JSX.Element => {
       const min = 3600 + prevDeg;
       let deg = Math.floor(Math.random() * (max + 1 - min)) + min;
       setPrevDeg(deg);
-      canvas.style.transition = "1s ease-out";
+      canvas.style.transition = "4s ease-out";
       canvas.style.transform = `rotate(${deg}deg)`;
       const basicPoint = 90;
       setTimeout(() => {
