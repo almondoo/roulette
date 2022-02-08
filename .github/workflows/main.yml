@@ -21,6 +21,7 @@ jobs:
 
       - name: go to next dir
         run: cd next
+        run: pwd
 
       - name: install npm packages
         run: npm ci
