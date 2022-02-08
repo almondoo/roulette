@@ -34,7 +34,7 @@ jobs:
         working-directory: ./next
 
       - name: go to export
-        run: mv /out ../
+        run: mv out/ ../
         working-directory: ./next
 
       - name: deploy to github pages
