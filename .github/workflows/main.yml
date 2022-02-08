@@ -19,19 +19,19 @@ jobs:
         with:
           node-version: "14.x"
 
-      - name: go to next dir
-        run: cd next
-
       - name: install npm packages
         run: npm ci
+        working-directory: ./next
 
       - name: build next.js app
         run: npm run build
+        working-directory: ./next
         env:
           URL_PREFIX: next
 
       - name: export next.js app
         run: npm run export
+        working-directory: ./next
 
       - name: deploy to github pages
         uses: peaceiris/actions-gh-pages@v3
