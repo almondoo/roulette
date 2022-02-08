@@ -34,8 +34,7 @@ jobs:
         working-directory: ./next
 
       - name: go to export
-        run: mv ./ ../
-        working-directory: ./next
+        run: mv next/ ./
 
       - name: deploy to github pages
         uses: peaceiris/actions-gh-pages@v3
