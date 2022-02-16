@@ -1,16 +1,29 @@
+import { useState } from "react";
 import Style from "./style";
 import Circle from "../../uiParts/circle";
+import RouletteItem from "../../originals/rouletteItem";
 
-type Props = {
-  items: string[];
-};
+const items: string[] = [
+  "one",
+  "two",
+  "three",
+  "four",
+  "five",
+  "six",
+  "seven",
+  "eight",
+  "nine",
+  "ten",
+];
 
-const Home = ({ items }: Props): JSX.Element => {
+const Home = (): JSX.Element => {
+  const [item, setItem] = useState<string[]>(items);
   return (
     <Style.Wrapper>
       <Style.Content>
-        <Circle items={items}></Circle>
+        <Circle items={item} />
       </Style.Content>
+      <RouletteItem handleSetItem={setItem} />
     </Style.Wrapper>
   );
 };

@@ -96,8 +96,10 @@ const Circle = ({ items }: Props): JSX.Element => {
         <Style.Arrow />
         <canvas id="roulette" width="400px" height="400px" ref={canvasRef} />
       </Style.Content>
-      <button onClick={handleRotate}>クリック</button>
-      {hitItem != "" ? <p>{hitItem}が当たり</p> : ""}
+      <Style.ButtonGroup>
+        <Style.Button onClick={handleRotate}>クリック</Style.Button>
+      </Style.ButtonGroup>
+      {hitItem != "" ? <Style.HitItem>{hitItem}が当たり</Style.HitItem> : ""}
     </Style.Wrapper>
   );
 };
