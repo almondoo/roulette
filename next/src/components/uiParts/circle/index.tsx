@@ -94,7 +94,14 @@ const Circle = ({ items }: Props): JSX.Element => {
       </Style.List>
       <Style.Content>
         <Style.Arrow />
-        <canvas id="roulette" width="400px" height="400px" ref={canvasRef} />
+        <Style.CanvasWrap>
+          <Style.Canvas
+            id="roulette"
+            width={400}
+            height={400}
+            ref={canvasRef}
+          />
+        </Style.CanvasWrap>
       </Style.Content>
       <Style.ButtonGroup>
         <Style.Button onClick={handleRotate}>クリック</Style.Button>

@@ -24,10 +24,30 @@ const Text = styled.p``;
 
 const Content = styled.div`
   margin: 0 auto 40px;
-  max-width: 400px;
-  max-height: 400px;
+  width: 400px;
+  height: 400px;
   position: relative;
+  @media (max-width: 420px) {
+    width: 300px;
+    height: 300px;
+  }
 `;
+
+const CanvasWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 50%;
+`;
+
+const Canvas = styled.canvas``;
 
 const Arrow = styled.div`
   position: absolute;
@@ -39,6 +59,9 @@ const Arrow = styled.div`
   border-style: solid;
   border-width: 15px 40px 15px 0;
   border-color: transparent red transparent transparent;
+  @media (max-width: 420px) {
+    top: 135px;
+  }
 `;
 
 const ButtonGroup = styled.div`
@@ -65,6 +88,8 @@ const exportDefault = {
   ColorBox,
   Text,
   Content,
+  CanvasWrap,
+  Canvas,
   Arrow,
   ButtonGroup,
   Button,
