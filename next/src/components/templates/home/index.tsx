@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Style from "./style";
 import Circle from "../../uiParts/circle";
 import RouletteItem from "../../originals/rouletteItem";
@@ -16,7 +16,7 @@ const items: string[] = [
   "ten",
 ];
 
-const Home = (): JSX.Element => {
+const Home = (): React.JSX.Element => {
   const [item, setItem] = useState<string[]>(items);
   return (
     <Style.Wrapper>

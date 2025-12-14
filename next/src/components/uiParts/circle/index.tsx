@@ -1,11 +1,11 @@
-import { useState, useEffect, useRef, createElement } from "react";
+import React, { useState, useEffect, useRef, createElement } from "react";
 import Style from "./style";
 
 type Props = {
   items: string[];
 };
 
-const Circle = ({ items }: Props): JSX.Element => {
+const Circle = ({ items }: Props): React.JSX.Element => {
   const [itemColors, setItemsColors] = useState<string[]>([]);
   // 前回のdegの数値
   const [prevDeg, setPrevDeg] = useState<number>(0);
